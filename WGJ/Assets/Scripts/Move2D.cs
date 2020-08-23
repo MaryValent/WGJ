@@ -28,6 +28,7 @@ public class Move2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded == true)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpSpeed), ForceMode2D.Impulse);
+            isGrounded = false;
         }
     }
 }
